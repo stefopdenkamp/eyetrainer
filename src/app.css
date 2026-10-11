@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Optician-Sans;
+	src: url('/fonts/Optician-Sans.ttf');
+}
+
+:root {
+	--bg: hsl(0, 0%, 5%);
+	--panel: hsl(0, 0%, 10%);
+	--text: hsl(0, 0%, 95%);
+	--muted: lightgray;
+}
+
+body {
+	min-height: 100vh;
+	background-color: var(--bg);
+	color: var(--text);
+	font-family: Optician-Sans, Verdana, sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+button,
+input,
+select {
+	font-family: inherit;
+}
