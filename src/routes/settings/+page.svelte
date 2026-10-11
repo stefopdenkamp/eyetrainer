@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
@@ -45,6 +46,8 @@
 		message = res.ok ? 'Saved' : (await res.json()).message;
 	}
 </script>
+
+<svelte:window onkeydown={(event) => event.key === 'Escape' && goto('/')} />
 
 <main>
 	<form onsubmit={save}>

@@ -16,5 +16,9 @@ export default defineConfig({
 			// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 			adapter: adapter()
 		})
-	]
+	],
+	// PORT comes from .env (loaded by Bun); without it Vite uses its default.
+	server: {
+		port: process.env.PORT ? Number(process.env.PORT) : undefined
+	}
 });
